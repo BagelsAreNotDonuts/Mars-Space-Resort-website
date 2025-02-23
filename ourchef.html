@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title> Mars Space Resort Chef </title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
+
+	</head>
+		<body>
+
+			<!-- Note - I don't like the look of headers with my chosen font, but I
+			do like paragraph's look, so that's why I don't have any h1 
+			tags and the like. -->
+
+			<header id = "generalheader">
+				<div id = "generalheadertext">
+					<div class = "nametextbox">
+						<p> O&nbsp;U&nbsp;R&nbsp;&nbsp;C&nbsp;H&nbsp;E&nbsp;F</p> 
+
+					</div>
+					<div class = "subheadingtextbox">
+						<p><br></p>
+			    	</div>
+				</div>
+			</header>
+
+
+			<nav id = "navbar">
+				<div class ="innernav" id = "navcontainer">
+					<div class = "logo">
+					<a href="index.html"> <img class = "logoimage" src = "images/logo.png" alt = "Resort Logo"> </a>
+					</div>
+
+					<div class = "navitems">
+					<ul>
+						<li> <a href="index.html">HOME</a> </li>
+		
+						<li class = "dropdown"> <button class ="dropbtn">DISCOVER▾
+						<i class="fa fa-caret-down"></i></button> 
+
+						<div class = "dropdown-content">
+							<a href="travelinfo.html">TRAVEL INFO</a>
+      						<a href="lodging.html">LODGING</a>
+      						<a href="about.html">ABOUT US</a>
+						</div>
+
+						</li>
+
+						<li class = "dropdown"> <button class ="dropbtn">EXPERIENCE▾
+						<i class="fa fa-caret-down"></i></button> 
+
+						<div class = "dropdown-content">
+							<a href="activities.html">ACTIVITIES</a>
+      						<a href="dining.html">DINING</a>
+      						<a href="gallery.html">GALLERY</a>
+						</div>
+
+						</li>
+		
+						<li> <a id = "nav-booking" href="booking.html">BOOKING</a> </li>
+
+
+					</ul>
+					</div>
+
+					<div class = "hamburgerbar">
+						<a href="javascript:function()" class="icon">&#9776;</a>
+					</div>
+
+				</div>
+
+				<nav id = "responsive-nav" class = "unactive-nav">
+					<div class = "responsive-dropdown" id = "discover"> 
+						<button class ="dropbtn">DISCOVER▾
+						<i class="fa fa-caret-down"></i></button> 
+						<div class = "dropdown-content">
+							<a href="travelinfo.html">TRAVEL INFO</a>
+      						<a href="lodging.html">LODGING</a>
+      						<a href="about.html">ABOUT US</a>
+						</div>
+					</div>
+
+					<div class = "responsive-dropdown" id = "experience"> 
+						<button class ="dropbtn">EXPERIENCE▾
+						<i class="fa fa-caret-down"></i></button> 
+						<div class = "dropdown-content">
+							<a href="activities.html">ACTIVITIES</a>
+      						<a href="dining.html">DINING</a>
+      						<a href="gallery.html">GALLERY</a>
+						</div>
+					</div>
+
+				</nav>
+
+			</nav>
+
+			<article id = "chef"> 
+
+				<img src = "images/randybeans.png" alt = "Resort head chef">
+
+				<div class = "chefdesc">
+
+					<div class = desccontainer>
+
+						<h1> OUR HEAD CHEF: RANDY BEANS </h1>
+
+						<p> Randy Beans is an extraordinary chef owning various 
+						3 michelin star restaurants back on Earth. Since joining our team in 2074, he has produced only the finest culinary results as befitting of both his reputation on Earth, and our exceptional standards at MSR Restaurant.</p>
+
+						<button id = "readmore">READ MORE</button> 
+
+					</div>
+
+
+				</div>
+			
+			</article>
+
+			<div id="readmore-popup">
+			<section class="readmore-container">
+				<nav class="close-button">
+					<a href="ourchef.html">Close</a>
+				</nav>
+				
+				<article>
+					<h3>-Randy Beans' Notable Achievements-</h3>
+					<ul> 
+						<li>Has won the Catey awards for "Independent Restaurateur of the Year".</li>
+						<li>Owns 600 3 Michelin star restaurants across the globe.</li>
+						<li>Professional MMA fighter.</li>
+						<li>Appointed Officer of the Order of the British Empire
+							<br> in 2063 by King William Arthur Philip Louis. </li>
+						<li>Succeeded Arnold Schwarzenegger and became the governer of California.</li>
+					</ul>
+				</article>
+
+			</section>
+			</div>
+
+
+
+
+			<footer>
+
+				<div> <a class = "footerlink"  href="about.html">ABOUT</a> </div>
+
+				<div> 
+
+					<div>
+
+						<a class = "middlefooterlink" href="contactus.html">CONTACT</a>
+
+						<a href="index.html"> <img src = "images/logo.png" alt = "Resort Logo"> </a>
+
+					</div>
+
+				</div>
+
+				<div> <a class = "footerlink" href="gallery.html">GALLERY</a> </div>
+
+				
+			</footer>
+
+			<script src="js/script.js"></script>
+
+
+		</body>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title> Mars Space Resort Booking</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
+
+	</head>
+		<body>
+
+			<!-- Note - I don't like the look of headers with my chosen font, but I
+			do like paragraph's look, so that's why I don't have any h1 
+			tags and the like. -->
+
+			<header id = "generalheader">
+				<div id = "generalheadertext">
+					<div class = "nametextbox">
+						<p> B&nbsp;O&nbsp;O&nbsp;K&nbsp;I&nbsp;N&nbsp;G</p> 
+
+					</div>
+					<div class = "subheadingtextbox">
+						<p>B&nbsp;O&nbsp;O&nbsp;K&nbsp;&nbsp;Y&nbsp;O&nbsp;U&nbsp;R 
+						<br>S&nbsp;T&nbsp;A&nbsp;Y
+						</p>
+			    	</div>
+				</div>
+
+			
+			</header>
+
+
+			<nav id = "navbar">
+				<div class ="innernav" id = "navcontainer">
+					<div class = "logo">
+					<a href="index.html"> <img class = "logoimage" src = "images/logo.png" alt = "Resort Logo"> </a>
+					</div>
+
+					<div class = "navitems">
+					<ul>
+						<li> <a href="index.html">HOME</a> </li>
+		
+						<li class = "dropdown"> <button class ="dropbtn">DISCOVER▾
+						<i class="fa fa-caret-down"></i></button> 
+
+						<div class = "dropdown-content">
+							<a href="travelinfo.html">TRAVEL INFO</a>
+      						<a href="lodging.html">LODGING</a>
+      						<a href="about.html">ABOUT US</a>
+						</div>
+
+						</li>
+
+						<li class = "dropdown"> <button class ="dropbtn">EXPERIENCE▾
+						<i class="fa fa-caret-down"></i></button> 
+
+						<div class = "dropdown-content">
+							<a href="activities.html">ACTIVITIES</a>
+      						<a href="dining.html">DINING</a>
+      						<a href="gallery.html">GALLERY</a>
+						</div>
+
+						</li>
+		
+						<li> <a id = "nav-booking" href="booking.html">BOOKING</a> </li>
+
+
+					</ul>
+					</div>
+
+					<div class = "hamburgerbar">
+						<a href="javascript:function()" class="icon">&#9776;</a>
+					</div>
+
+				</div>
+
+				<nav id = "responsive-nav" class = "unactive-nav">
+					<div class = "responsive-dropdown" id = "discover"> 
+						<button class ="dropbtn">DISCOVER▾
+						<i class="fa fa-caret-down"></i></button> 
+						<div class = "dropdown-content">
+							<a href="travelinfo.html">TRAVEL INFO</a>
+      						<a href="lodging.html">LODGING</a>
+      						<a href="about.html">ABOUT US</a>
+						</div>
+					</div>
+
+					<div class = "responsive-dropdown" id = "experience"> 
+						<button class ="dropbtn">EXPERIENCE▾
+						<i class="fa fa-caret-down"></i></button> 
+						<div class = "dropdown-content">
+							<a href="activities.html">ACTIVITIES</a>
+      						<a href="dining.html">DINING</a>
+      						<a href="gallery.html">GALLERY</a>
+						</div>
+					</div>
+
+				</nav>
+
+			</nav>
+
+			<section id = "bookingsection"> 
+				<form id = "bookingform">
+				<fieldset class = "bookingdetails">
+					<div class = field-container>
+						<input type = "text" id = "Bookingfnamelname" name="fnamelname" placeholder="FIRST & LAST NAME">
+					
+
+						<input type = "text" id = "BookingPhone" name = "Phone" placeholder="PHONE NUMBER">
+					</div>
+
+					<div class = field-container>
+						<input type = "text" id = "BookingEmail" name = "Email" placeholder="EMAIL">
+
+						<input type = "text" id = "BookingPostcode" name="Postcode" placeholder="4 NUMBER POSTCODE">
+					</div>
+
+					<div class = field-container>
+						<select id ="roomselect" name = "roomselect">
+							<option value="None">SELECT YOUR ROOM</option>
+							<option value="Standard Room">Standard Room</option>
+							<option value="Superior Room">Superior Room</option>
+							<option value="Deluxe Room">Deluxe Room</option>
+						</select>
+					</div>
+
+					<div class = field-container>
+						<label for ="Arrival" id = "Arrival-label">ARRIVAL DATE:&nbsp;
+						<input type = "date" id = "Arrival" name = "ArrivalDate"></label>
+
+						<label for ="Departure" id = "Departure-label">DEPARTURE DATE:&nbsp;&nbsp;
+						<input type = "date" id = "Departure" name="DepartureDate"></label>
+					</div>
+
+					<div id = total-container>
+						<p id = "total">TOTAL COST: $0 </p>
+					</div>
+
+					<button class="submitbutton">SUBMIT</button>
+				</fieldset>
+
+				</form>
+			</section>
+
+			<footer>
+
+				<div> <a class = "footerlink"  href="about.html">ABOUT</a> </div>
+
+				<div> 
+
+					<div>
+
+						<a class = "middlefooterlink" href="contactus.html">CONTACT</a>
+
+						<a href="index.html"> <img src = "images/logo.png" alt = "Resort Logo"> </a>
+
+					</div>
+
+				</div>
+
+				<div> <a class = "footerlink" href="gallery.html">GALLERY</a> </div>
+
+				
+			</footer>
+
+			<script src="js/script.js"></script>
+
+		</body>

@@ -1,0 +1,1728 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Space Grotesk', sans-serif;
+	display: flex;
+	flex-direction: column;
+	background-color: black;
+
+}
+
+h1 {
+	color: white;
+}
+
+/*Desktop first approach taken*/
+
+#navbar {
+	position: fixed;
+	z-index: 6969;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	background: rgb(0, 0, 0, 0.8);
+	top: 0;
+	width: 100%;
+	/*height: 12.5%;*/
+	height: auto;
+	min-height: 6.5%;
+	border-top: solid white 0.02em;
+	border-bottom: solid white 0.02em;
+	color: white;
+	font-size: 30px;
+	flex-wrap: wrap;
+
+
+}
+
+.unactive-nav, .unactive-nav.active {
+	display: none;
+}
+
+
+
+.innernav {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 95%;
+
+}
+
+.navitems {
+	width: 85%;
+	height: 3.5em;
+	display: flex;
+}
+
+.navitems ul {
+	display: flex;
+	list-style: none;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+	justify-content: space-around;
+}
+
+#nav-booking {
+	padding-right: 5%;
+	padding-left: 5%;
+	border: solid white 0.5px;
+}
+
+
+.dropdown {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+
+.dropbtn{
+	font-size: 30px;  
+  	border: none;
+  	outline: none;
+  	color: white;
+  	background-color: inherit;
+  	font-family: inherit;
+  	margin: 0;
+  	border-radius: 10px;
+	
+}
+
+.dropdown-content {
+	display: none;
+  	position: absolute;
+  	background-color: black;
+  	border: solid white 0.5px;
+  	z-index: 1;
+}
+
+
+
+.navitems a:hover,  .dropdown:hover .dropbtn {
+ 	transition: all 1s ease;
+  	background-color: white;
+  	color: black;
+}
+
+
+.dropdown:hover .dropdown-content {
+ 	animation: pushDown 300ms ease-in-out forwards;
+ 	transform-origin: top center;
+ 	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	border-radius: 5px;
+  	/*This is unironically necessary since there was a slight gap between the button
+  	and dropdown menu*/
+  	top: 69%;
+  	padding-right: 8px;
+ 	padding-left: 8px;
+
+
+}
+
+.dropdown:hover .dropdown-content a {
+  	font-size: 30px;
+  	padding-top: 5%;
+  	padding-bottom: 5%;
+  	border-radius: 0;
+  	width: 100%;
+  	text-align: center;
+  	padding-right: 8px;
+ 	padding-left: 8px;
+  
+}
+
+
+.navitems ul li a {
+	text-decoration: none;
+	color: white;
+	border-radius: 5px;
+}
+
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	width: 15%;
+	height: 3.5em;
+}
+
+.logo a {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	height: 100%;
+}
+
+.logoimage {
+	height: 90%;
+	width: auto;
+	right: 8%;
+
+}
+
+
+
+.hamburgerbar {
+	display: none;
+	flex-direction: column;
+	width: 15%;
+	align-items: center;
+	text-decoration: none;
+	font-size: 25px;
+
+}
+
+#navbar a.icon {
+  	text-decoration: none;
+	color: white;
+	text-align: center;
+	width: 100%;
+
+ }
+
+/*Homepage html*/
+
+#homeheader {
+	display: flex;
+	position: relative;
+	color: white;
+	width: 100%;
+	height: 100vh;
+	background-image: url('../images/homepagepicturev2.png');
+	background-size: cover;
+	background-position: center center;
+}
+
+
+#homeheadertext {
+	position: absolute;
+	top: 25%;
+	left: 12%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 50%;
+	width: 40%;
+	align-items: center;
+}
+
+.nametextbox {
+	margin-top: 40%;
+	margin-bottom: 2%;
+	padding-bottom: 1%;
+	border-bottom: solid white 0.02em;
+	text-align: center;
+	font-size: 4vw;
+
+}
+
+.subheadingtextbox {
+	margin-bottom: 40%;
+	text-align: center;
+	font-size: 1.5vw;
+
+}
+
+/*Home Links section*/
+
+#pagelinks {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	border-top: 0.5px solid white;
+	color: white;
+	font-size: 2vw;
+}
+
+#pagelinks .activitytitle {
+
+	width: 50%;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 25%;
+	border: 0.5px solid white;
+	background-color: rgb(0, 0, 0, 0.8);
+}
+
+#activitieslink {
+	background-color: black;
+	position: relative;
+	width: 33.333%;
+	height: 100%;
+	border-right: solid white 0.5px;
+}
+
+
+#lodginglink {
+	background-color: black;
+	position: relative;
+	width: 33.333%;
+	height: 100%;
+	border-left: solid white 0.5px;
+	border-right: solid white 0.5px;
+
+}
+
+#dininglink {
+	background-color: black;
+	position: relative;
+	width: 33.333%;
+	height: 100%;
+	border-left: solid white 0.5px;
+}
+
+#pagelinks .homeimage {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-bottom: solid white 0.5px;
+}
+
+#pagelinks a {
+	text-decoration: none;
+	color: white;
+
+}
+
+#activitieslink:hover .activitytitle,#lodginglink:hover .activitytitle,#dininglink:hover .activitytitle{
+	transition: all 1s ease;
+	background-color: white;
+	color: black;
+	border-color: black;
+	
+}
+
+
+
+
+/*Lodging page html - this page is quite weirdly coded, I need to clean it up, the dining page is a cleaner implementation of this
+sort of layout*/
+#generalheader {
+	display: flex;
+	position: relative;
+	align-items: center;
+	flex-direction: column;
+	color: white;
+	width: 100%;
+	height: 100vh;
+	background-image: url('../images/headerbg.png');
+	background-size: cover;
+	background-position: center center;
+
+}
+
+#generalheadertext {
+	position: absolute;
+	top: 25%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 50%;
+	align-items: center;
+	text-shadow: 2px 2px 6px black;
+}
+
+#lodging {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	width: 100%;
+	background-color: black;
+	border-top: solid white 0.02em;
+}
+
+
+.lodgingimage{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 50%;
+	height: 100%;
+	border-right: solid white 0.5px;
+
+}
+
+.lodgingimage img {
+	width: 100%;
+	height: 100%;
+
+}
+
+.lodginginfo {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+
+.lodgingcontainer {
+	width: 100%;
+	background-color: black;
+
+}
+
+/*LODGING bit*/
+.lodgingcontainer div:nth-of-type(1){
+	height: 5%;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 2%;
+}
+
+/*Room types*/
+.lodgingcontainer div:nth-of-type(2) {
+	height: 5%;
+	border-bottom: solid white 0.5px;
+
+
+}
+
+.lodgingcontainer h1 {
+	text-align: center;
+	height: 5%;
+}
+
+.lodgingcontainer div:nth-of-type(2) + h1{
+	margin-top: 2%;
+	
+}
+
+
+.lodgingtypes {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	font-size: 18px; 
+	list-style: none;
+	height:100%;
+	align-items: center;
+
+}
+
+
+.lodgingcontainer div:nth-of-type(2) button {
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 5px;
+	font-size: 1.5vw; 
+	background-color: black;
+	border: none;
+	font-family: 'Space Grotesk', sans-serif;
+	margin-bottom: 2%;
+}
+
+.lodgingcontainer div:nth-of-type(2) .selected-room {
+	background-color: white;
+	color: black;
+	border-color: black;
+}
+
+.lodgingcontainer div:nth-of-type(2) button:hover{
+	transition: all 1s ease;
+	background-color: white;
+	color: black;
+	border-color: black;
+
+}
+
+/*I had icon images but they weren't behaving, so I just left this here*/
+
+.icons {
+	color: white;
+	height: 8%;
+	margin-top: 5%;
+	width: 100%;
+	text-align: center;
+}
+
+.icons ul {
+	/*border: solid blue;*/
+	width: 100%;
+	height: 100%;
+	display: flex;	
+	
+
+}
+
+.icons ul li{
+	/*border: solid yellow;*/
+	height: 100%;
+	width: 33%;
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+}
+
+
+/*Selects middle icon, so the bedicon*/
+.icons ul li:nth-of-type(2) h2 {
+	margin-left: 10%;
+
+}
+
+.icons img {
+	/*border: solid red;*/
+	width: 30%;
+	margin-left: 30%;
+
+}
+
+
+.description {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	color: white;
+	text-align: center;
+	font-size: 1.5vw;
+	
+}
+
+.description p {
+	width: 80%;
+	margin-top: 5%;
+	
+}
+
+.button-container {
+	width: 100%; 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 2%;
+}
+
+.booking-button {
+	text-decoration: none;
+	color: white;
+	font-size: 1.5vw;
+	border: solid white 0.5px;
+	padding: 0.25%;
+	/*margin-top: 4%;*/
+}
+
+.booking-button:hover {
+	transition: all 1s ease;
+	background-color: white;
+	color: black;
+}
+
+
+
+/*Dining page html*/
+
+#restaurantbrief {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-top: solid white 0.5px;
+	border-bottom: solid white 0.5px;
+	font-size: 1.5vw;
+	color: white;
+}
+
+#restaurantbrief h1{
+	width: 50%;
+	text-align: center;
+	color: white;
+	padding-top: 2%;
+}
+
+#restaurantbrief p{
+	text-align: center;
+	padding-bottom: 2%;
+	word-wrap: break-word;
+	width: 50%;
+	padding-top: 2%;
+}
+
+
+#cuisine {
+	display: flex;
+	flex-direction: row;
+	color: white;
+}
+
+#cuisine img {
+	width: 50%;
+	border-right: solid white 0.5px;
+
+}
+
+.cuisinedesc {
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-size: 1.5vw;
+}
+
+/*Applied to all descriptions of the same format*/
+.desccontainer {
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+
+}
+
+.desccontainer h1 {
+	padding-bottom: 3%;
+
+}
+
+.desccontainer p {
+	width: 80%;
+	word-wrap: break-word;
+	text-align: center;
+
+}
+
+
+#cuisine .cuisinedesc a{
+	text-decoration: none;
+	color: white;
+	font-size: 1.25vw;
+	border: solid white 0.5px;
+	padding: 0.25%;
+	margin-top: 4%;
+}
+
+
+
+#restaurant {
+	display: flex;
+	flex-direction: row;
+	color: white;
+}
+
+
+#restaurant img {
+	/*If this is 50% for some reason the middle lines across the screen don't 
+	line up properly, I have absolutely no idea why.*/
+	width: 49.93%;
+	border-top: solid white 0.5px;
+	
+}
+
+#restaurant .restaurantdesc {
+	width: 50%;
+	border-top: solid white 0.5px;
+	border-right: solid white 0.5px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-size: 1.5vw;
+
+	
+}
+
+
+#restaurant .restaurantdesc a{
+	text-decoration: none;
+	color: white;
+	font-size: 1.25vw;
+	border: solid white 0.5px;
+	padding: 0.25%;
+	margin-top: 4%;
+
+	
+}
+
+#cuisine a:hover, #restaurant a:hover {
+	transition: all 1s ease;
+	background-color: white;
+	color: black;
+}
+
+
+/*Activities page html*/
+
+#activitiesbrief {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-top: solid white 0.5px;
+	font-size: 1.5vw;
+	color: white;
+}
+
+#activitiesbrief h1{
+	width: 50%;
+	text-align: center;
+	color: white;
+	padding-top: 2%;
+}
+
+#activitiesbrief p{
+	text-align: center;
+	padding-bottom: 2%;
+	word-wrap: break-word;
+	width: 50%;
+	padding-top: 1%;
+}
+
+.activitydesc {
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-size: 1.5vw;
+	border-top: solid white 0.5px;
+	/*border: solid red 0.5px;*/
+	/*border-right: solid white 0.5px;*/
+
+}
+
+/*Also augmenting the travel info layout here because*/
+
+#lasertag, #walkingtrack, #swimmingpool, #racingcircuit, #golf, #travelinfo {
+	display: flex;
+	flex-direction: row;
+	color: white;
+}
+
+#lasertag img, #swimmingpool img, #golf img, #travelinfo img   {
+	width: 50%;
+	border-right: solid white 0.5px;
+	border-top: solid white 0.5px;
+
+}
+
+
+#walkingtrack img, #racingcircuit img  {
+	/*If this is 50% for some reason the middle lines across the screen don't 
+	line up properly, I have absolutely no idea why.*/
+	width: 49.93%;
+	border-top: solid white 0.5px;
+	border-left: solid white 0.5px;
+
+	
+}
+
+
+/*About us page*/
+
+#aboutus, #references {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 30px;
+	color: white;
+	margin-bottom: 2%;
+	border-top: solid white 0.5px;
+
+}
+
+#aboutus h1, #references h1{
+	width: 40%;
+	text-align: center;	
+	color: white;
+	padding-top: 2%;
+}
+
+#aboutus p, #references a{
+	word-wrap: break-word;
+	text-align: center;
+	padding-bottom: 2%;
+	width: 60%;
+}
+
+#references a {
+	text-decoration: none;
+	color: white;
+}
+
+#references a:hover {
+	transition: all 1s ease;
+	color: gray;
+}
+
+/*Contact us page*/
+
+#enquiryform {
+	width: 60%;
+}
+
+.details {
+	border: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+
+#contact input[type=text], #contact textarea {
+	width: 60%;
+	padding: 1% 1%;
+	border-radius: 10px;
+	font-weight: bold;
+	font-size: 0.8em;
+	font-family: 'Space Grotesk', sans-serif;
+}
+
+#contact {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 30px;
+	color: white;
+	margin-bottom: 2%;
+	border-top: solid white 0.5px;
+
+}
+
+#contact button {
+
+	width: 60%;
+	text-align: center;
+	border-radius: 10px;
+	font-weight: bold;
+	font-size: 0.8em;
+	padding-left: 1%;
+	padding-right: 1%;
+	background-color: white;
+	text-decoration: none;
+	color: black;
+	border: solid black 0.5px;
+}
+
+#contact button:hover {
+	transition: all 1s ease;
+	background-color: black;
+	color: white;
+	padding-left: 1%;
+	padding-right: 1%;
+	border: solid white 0.5px;
+}
+
+#contact h1{
+	width: 40%;
+	text-align: center;	
+	color: white;
+	padding-top: 2%;
+}
+
+/*Booking page*/
+
+#bookingsection {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: white;
+	margin-bottom: 2%;
+	border-top: solid white 0.5px;	
+
+}
+
+#bookingsection .submitbutton {
+	width: 100%;
+	text-align: center;
+	border-radius: 5px;
+	font-weight: bold;
+	font-size: 1.5vw;
+	background-color: white;
+	color: black;
+	border: solid black 0.5px;	
+	margin-top: 2%;
+}
+
+#bookingsection .submitbutton:hover {
+	transition: all 1s ease;
+	background-color: black;
+	color: white;
+	padding-left: 1%;
+	padding-right: 1%;
+	border: solid white 0.5px;
+}
+
+#bookingform {
+	width: 60%;
+	margin-top: 1%; 	
+	flex-wrap: wrap;
+	display: flex;
+}
+
+.bookingdetails {
+	width: 100%;
+	display: flex;
+	border:none;
+	flex-direction: column;
+	align-items: center;
+}
+
+.field-container, #total-container {
+	margin-top: 2%;	
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-between;
+
+}
+
+
+#bookingsection label {
+	width: 50%;
+	font-size: 1.5vw;
+}
+
+#Departure-label {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+/*Makes the select, input and textarea box sizes the same, since there is a 2px difference normally*/
+input, select, textarea {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+#bookingsection input {
+	width: 49%;
+	padding: 1% 1%;
+	border-radius: 5px;
+	font-weight: bold;
+	font-size: 1.5vw;
+	font-family: 'Space Grotesk', sans-serif;
+}
+
+#roomselect, #bookingsection p {
+	outline: none;
+	width: 100%;
+	padding: 1% 1%;
+	border-radius: 5px;
+	font-weight: bold;
+	font-size: 1.5vw;
+	font-family: 'Space Grotesk', sans-serif;	
+}
+
+#bookingsection p {
+	color: black;
+	background-color: white;
+
+}
+
+/*Gallery html*/
+
+#gallery {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-top: solid white 0.5px;
+
+}
+
+.gallerybox {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.gallerybox .galleryimg {
+	display: flex;
+	/*Page gets a horizontal scrollbar if it's above this width percentage.*/
+	width: 33.31%;
+
+}
+
+.gallerybox img {
+	width: 100%;
+	height: auto;
+}
+
+.gallerybox a:nth-of-type(2n) img, .gallerybox a:nth-of-type(3n) img {
+	border-left: solid white 0.5px;
+
+}
+
+.gallerybox a:nth-of-type(5) img {
+	border-left: solid white 0.5px;
+
+}
+
+.gallerybox a:nth-of-type(4) img {
+	border-left: none;
+
+}
+
+
+/*Our menu html*/
+#menu {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 30px;
+	color: white;
+	margin-bottom: 2%;
+	border-top: solid white 0.5px;
+
+}
+
+#menu h1 {
+	margin-top: 1%;
+}
+
+#menu h3 {
+	margin-top: 2%;
+}
+
+/*Our chef html*/
+
+.chefdesc {
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-size: 1.5vw;
+	border-top: solid white 0.5px;
+
+}
+
+.chefdesc p {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	width: 70%;
+}
+
+#chef {
+	display: flex;
+	flex-direction: row;
+	color: white;
+}
+
+#chef img {
+	width: 50%;
+	border-right: solid white 0.5px;
+	border-top: solid white 0.5px;
+
+}
+
+#readmore {
+	background-color: black;
+	color: white;
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 1.25vw;
+	border: solid white 0.5px;
+	padding: 0.25%;
+	margin-top: 4%;
+
+	
+}
+
+#readmore:hover {
+	transition: 1s ease;
+	background-color: white;
+	color: black;
+}
+
+#readmore:active {
+	transition: 0s;
+	background-color: gray;
+	color: black;
+}
+
+
+
+#readmore-popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: rgba(0,0,0,0.75);
+	width: 100%;
+	height: 100%;
+	transition: all 0.5s ease;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 100;
+}
+
+#readmore-popup .readmore-container {
+	background: white;
+	padding-top: 5em;
+	position: relative;
+	border-radius: 5px;
+	margin-top: 25vh;
+	width: 60%
+}
+
+#readmore-popup .readmore-container h3 {
+	font-size: 22px;
+	text-align: center;
+}
+
+#readmore-popup .readmore-container ul {
+	padding-bottom: 5%;
+}
+
+#readmore-popup .readmore-container ul li {
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	padding: 0.5em 0em 0.5em;
+}
+
+
+#readmore-popup .close-button a {
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 22px;
+	text-transform: uppercase;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 1em;
+}
+
+#readmore-popup .close-button a:before {
+	content: "\2716"; 
+	padding-right: 5px;
+	
+}
+
+body.show-readmore-popup {
+	overflow: hidden;
+}
+
+body.show-readmore-popup #readmore-popup {
+	visibility: visible;
+	opacity: 1;
+}
+
+
+/*Travel info html*/
+
+#timetable-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-top: solid white 0.5px;
+	font-size: 1.5vw;
+	color: white;
+
+}
+
+#timetable-section h1{
+	width: 50%;
+	text-align: center;
+	color: white;
+	padding-top: 2%;
+}
+
+#timetable-section p{
+	text-align: center;
+	padding-bottom: 2%;
+	word-wrap: break-word;
+	width: 50%;
+}
+
+#timetable-section table {
+	border-collapse: collapse;
+	border: solid white 0.5px;
+	margin-bottom: 2%;
+	width: 70%;
+	font-size: 18px;
+}
+
+#timetable-section table, #timetable-section th, #timetable-section td {
+	border: solid white 1px;
+	padding: 2%;
+	text-align: center;
+}
+
+/*Changing placeholder text color across all browsers*/
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: black;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: black;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: black;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: black;
+}
+
+/*Footer for all pages*/
+
+footer {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 30vh;
+	background-image: url('../images/footerimage.png');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	border-top: solid white 0.02em;
+}
+footer div {
+	position: relative;
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+	width: 33.333%;
+	height: 100%;
+}
+
+.footerlink, .middlefooterlink{
+	text-decoration: none;
+	color: white;
+	text-align: center;
+	font-size: 25px;
+
+}
+
+
+footer div:nth-of-type(2) div{
+	width: 100%;
+	height: 100%;
+
+}
+
+.middlefooterlink {
+	width: 100%;
+	align-items: center;
+	margin-top: 11%;
+}
+
+footer div:nth-of-type(2) div a:nth-of-type(2) {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 50%;
+
+}
+
+footer div:nth-of-type(2) div img{
+	width: auto;
+	height: 100%;
+
+}
+
+.footerlink,.middlefooterlink {
+	position: absolute;
+	bottom: 60%;
+}
+
+footer .footerlink:hover, .middlefooterlink:hover {
+	animation-name: linkpulse;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+
+}
+/*Animations*/
+@keyframes linkpulse {
+	0% {
+		transform:scale(1);
+
+	}
+
+	50%{
+		transform:scale(1.5);
+
+	}
+
+
+	100% {
+		transform:scale(1);
+
+	}
+}
+
+@keyframes pushDown {
+  0% {
+    transform: scaleY(0)
+  }
+  100% {
+    transform: scaleY(1)
+  }
+
+}
+/*Slightly shrunk window sizing*/
+@media only screen and (max-width: 1000px) { 
+	#aboutus, #contact, #references {
+		font-size: 25px;
+	}
+
+	#contact input[type=text], #contact textarea {
+	width: 100%;
+	}
+
+	#contact button {
+	width: 100%;
+
+	}
+
+	#menu {
+	font-size: 25px;
+
+	}
+
+}
+
+/*Shrunk desktop window sizing*/
+@media only screen and (max-width: 900px) { 
+
+	#bookingform {
+		width: 95%;
+	}
+
+	.field-container {
+		flex-direction: column;
+		align-items: center;
+		margin-top: 0%;
+	}
+
+	#Departure-label, #Arrival-label {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+
+	}
+
+	#bookingsection input[type=text], #bookingsection label, #roomselect {
+		width: 100%;
+		font-size: 16px;
+		margin-top:2%;
+	}
+
+	#bookingsection input[type=date] {
+		font-size: 16px;
+		width: 100%
+	}
+
+
+	#roomselect, #bookingsection .submitbutton, #total-container p{
+		font-size: 16px;
+	}
+
+	#homeheadertext {
+		width: 50%;
+	}
+
+	#generalheadertext {
+		width: 50%;
+	}
+
+	.nametextbox {
+		font-size: 3em;
+
+	}
+
+
+	.subheadingtextbox {
+
+		font-size: 1.3em;
+
+
+	}
+
+	.logo {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+		width: 15%;
+
+	}
+
+
+	.logoimage {
+		height: 80%;
+		width: auto;
+
+	}
+
+	.navitems li:not(:first-child) li:not(:nth-of-type(4)), .navitems li:nth-of-type(2), .dropdown .dropbtn  {
+	    display: none;
+	 }
+
+	 .hamburgerbar {
+	 	display: flex;
+	 }
+
+	 .navitems ul {
+	 	justify-content: space-evenly;
+
+	 }
+
+
+	 #navbar a.icon {
+	  	text-decoration: none;
+		color: white;
+	    display: flex;
+	    flex-direction: row;
+	    align-items: center;
+	    justify-content: space-evenly;
+	    height: 2.5em;
+	    width: 100%;
+	 }
+
+	 #navbar a.icon:hover {
+	   transition: all 1s ease;
+	   background-color: white;
+	   color: black;
+	 }
+
+	.unactive-nav.active {
+		border-top: solid white 0.5px;
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		width: 100%;
+
+	}
+
+	.responsive-dropdown:hover .dropdown-content {
+		border-top: solid white 0.5px;
+		border-bottom: none;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.responsive-dropdown a {
+		text-decoration: none;
+		color: white;
+	    width: 100%;
+	    font-size: 16px;
+
+
+	}
+
+	.unactive-nav.active .responsive-dropdown .dropbtn {
+		width: 100%;
+		border-radius: 0px;
+	}
+
+	.unactive-nav.active a:hover, .responsive-dropdown:hover .dropbtn {
+		transition: all 1s ease;
+	  	background-color: white;
+	  	color: black;
+	}
+
+
+
+	.responsive-dropdown .dropdown-content {
+		position: relative;
+		width: 100%
+	}
+
+	.responsive-dropdown {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+
+	.unactive-nav.active #discover {
+	      border-right: solid white 0.25px;
+	}
+
+	#navbar {
+		font-size: 17px;
+	}
+
+	#navbar button {
+		font-size: 17px;
+	}
+
+
+
+	.navitems ul li a {
+		border-radius: 5px;
+	}
+
+	#lodging {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+
+	.lodgingimage {
+		width: 100%;
+	}
+
+	.lodgingimage img {
+		width: 100%;
+		height: auto;
+		border-top: 0;
+		border-bottom: 0;
+
+	}
+
+	.button-container {
+		padding-bottom: 5%;
+
+	}
+
+	.lodginginfo {
+		border-left: none;
+		border-bottom: solid white 0.5px;
+		width: 100%;
+	}
+
+	.lodgingcontainer div:nth-of-type(1){
+		font-size: 12px;
+	}
+
+	.lodgingcontainer div:nth-of-type(2) ul{
+		font-size: 15px; 
+		text-align: center;
+	}
+
+	.icons {
+		font-size: 12px;
+	}
+
+	.lodgingcontainer h1 {
+		font-size: 22px;
+		padding: 0%;
+	}
+
+	.lodgingcontainer div:nth-of-type(2) button {
+		font-size: 20px; 
+	}
+
+	.description, .booking-button  {
+		font-size: 16px;
+	}
+
+	.desccontainer h1 {
+		font-size: 18px;
+	}
+
+	.desccontainer p {
+		font-size:  16px;
+
+	}
+
+	#restaurantbrief h1 {
+		font-size: 18px;
+		padding-top: 5%;
+	}
+
+
+	#restaurantbrief p {
+		font-size: 16px;
+		padding-bottom: 5%;
+	}
+
+	#cuisine {
+		flex-direction: column;
+	}
+
+	#restaurant {
+		flex-direction: column-reverse;
+	}
+
+	#cuisine img, #restaurant img, #cuisine .cuisinedesc, #restaurant .restaurantdesc {
+		width: 100%;
+		height: auto;
+		border-left: none;
+		border-right: none;
+	}
+
+	#cuisine img {
+		border-bottom: solid white 0.5px;
+	}
+
+	#cuisine .cuisinedesc a, #restaurant .restaurantdesc a {
+		font-size: 16px;
+	}
+
+	#activitiesbrief h1 {
+		font-size: 18px;
+		padding-top: 5%;
+	}
+
+
+	#activitiesbrief p {
+		font-size: 16px;
+		padding-bottom: 5%;
+	}
+
+	#lasertag, #walkingtrack, #swimmingpool, #racingcircuit, #golf, #travelinfo {
+		flex-direction: column;
+	}
+
+	#walkingtrack, #racingcircuit {
+		flex-direction: column-reverse;
+	}
+
+	#lasertag img, #walkingtrack img, #swimmingpool img, #racingcircuit img,  #racingcircuit img, #golf img, #travelinfo img, .activitydesc {
+		width: 100%;
+		height: auto;
+		border-left: none;
+		border-right: none;
+	}
+
+	.desccontainer {
+		padding-top: 5%;
+		padding-bottom: 5%;
+	}
+
+
+	#chef {
+		flex-direction: column-reverse;
+	}
+
+	#chef img, #restaurant img, .chefdesc {
+		width: 100%;
+		height: auto;
+		border-left: none;
+		border-right: none;
+	}
+
+	#chef img {
+		border-bottom: solid white 0.5px;
+	}
+
+	#readmore {
+		font-size: 16px;
+	}
+
+
+	#readmore-popup .readmore-container {
+		margin-top: 10vh;
+	}
+
+	#readmore-popup .readmore-container h3 {
+		font-size: 18px;
+	}
+
+
+	#readmore-popup .readmore-container ul li {
+		font-size: 16px;
+	}
+
+	#timetable-section table {
+		width: 95%;
+	}
+
+	#timetable-section h1 {
+		font-size: 18px;
+	}
+
+	#timetable-section th, #timetable-section td {
+		font-size: 18px;
+	}
+
+	.footerlink, .middlefooterlink {
+		font-size: 16px;
+	}
+
+	footer div:nth-of-type(2) div a:nth-of-type(2) {
+		top: 18%;
+
+
+	}
+
+	footer div:nth-of-type(2) div img{
+		width: auto;
+		height: 70%;
+
+	}
+}
+
+
+/*Essentially phone sizing plus some*/
+@media only screen and (max-width: 500px) { 
+
+	#homeheader {
+		display: flex;
+		position: relative;
+		align-items: center;
+		flex-direction: column;
+		color: white;
+		width: 100%;
+		height: 100vh;
+		background-image: url('../images/headerbg.png');
+		background-size: cover;
+		background-position: center center;
+	}
+
+	#homeheadertext {
+		position: absolute;
+		top: 25%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 50%;
+		align-items: center;
+		text-shadow: 2px 2px 6px black;
+		left: 24%;
+	}
+
+
+	#pagelinks {
+		flex-direction: column;
+	}
+	#pagelinks div {
+		width: 100%;
+		height: auto;
+		border-left: none;
+		border-right: none;
+	}
+
+	#pagelinks div a{
+		font-size: 18px
+	}
+
+	.desccontainer h1 {
+		font-size: 18px;
+	}
+
+	.desccontainer p {
+		font-size: 16px;
+
+	}
+
+	#aboutus, #contact, #references {
+		font-size: 18px;
+	}
+
+	input[type=text], textarea {
+		width: 100%;
+	}
+
+	#menu {
+		font-size: 18px;
+
+	}
+
+	.lodgingtypes li a {
+	font-size: 16px;
+	
+	}
+
+
+}
